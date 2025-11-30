@@ -1,0 +1,600 @@
+/* ===== GENERAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 6%;
+    backdrop-filter: blur(10px);
+}
+
+nav .logo {
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;
+    color: #e50914;
+    letter-spacing: 2px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links li a:active {
+    background-color: red;
+}
+
+nav .nav-links li a:hover {
+    color: #e50914;
+}
+
+nav .signup-btn {
+    background-color: #e50914;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+nav .signup-btn:hover {
+    color: #ff2c2c;
+    background-color: white;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("images/hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.hero h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: #e50914;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    background: #e50914;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #ff2c2c;
+}
+
+/* ===== SECTION TITLES ===== */
+section {
+    padding: 5rem 10%;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 7rem;
+}
+
+h2 span {
+    color: #e50914;
+}
+
+/* ===== PROGRAMS ===== */
+/* Swiper height fix */
+/* .programs {
+    padding: 4rem 0;
+    width: 100%;
+}
+
+/* Ensure slides align properly */
+/* .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+/* Make program cards look good inside swiper */
+.program-container img {
+    width: 80%;
+}
+
+*/ 
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.program-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+
+}
+
+.program-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.program-container img {
+    width: 36%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.program-text {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.program-container.left .program-text {
+    order: 2;
+}
+
+.program-container.right .program-text {
+    order: 1;
+}
+
+.program-text h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #e50914;
+}
+
+.program-text p {
+    font-size: 1.3rem;
+}
+.swiper-scrollbar{
+    opacity: 1;
+}
+//* === Gym Pricing Section === */
+.pricing-section {
+    padding: 5rem 1rem;
+    text-align: center;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    color: #f9fafb;
+}
+
+.pricing-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #cf1616;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-section .section-subtitle {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Grid Layout */
+.pricing-section .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .pricing-section .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card Styles */
+.pricing-section .card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pricing-section .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Featured Card */
+.pricing-section .featured {
+    background: linear-gradient(160deg, #ef4444, #dc2626);
+    color: #fff;
+    border: 2px solid #f87171;
+    transform: scale(1.05);
+}
+
+.pricing-section .featured .plan-title,
+.pricing-section .featured .plan-price {
+    color: #fff;
+}
+
+.pricing-section .featured .plan-desc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-section .btn-featured {
+    background: #fff;
+    color: #ef4444;
+}
+
+.pricing-section .btn-featured:hover {
+    background: #f3f4f6;
+}
+
+/* Text Styling */
+.pricing-section .plan-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #f9fafb;
+    margin-bottom: 1rem;
+    text-align: center;
+
+}
+
+.pricing-section .plan-desc {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.pricing-section .plan-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f9fafb;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 3.5rem;
+}
+
+.pricing-section .plan-price span {
+    font-size: 1rem;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.pricing-section .plan-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: #e2e8f0;
+}
+
+.pricing-section .plan-features li {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Buttons */
+.pricing-section .btn {
+    display: inline-block;
+    width: 100%;
+    background: #f9fafb;
+    color: #0f172a;
+    padding: 0.9rem 0;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.pricing-section .btn:hover {
+    background: #cbd5e1;
+}
+
+/* Fade-up Animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate.fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+/* ===== TRAINERS ===== */
+.trainers .trainer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+}
+
+.trainer-card {
+    background: #181818;
+    border-radius: 15px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.trainer-card .h3 {
+    padding: 8px;
+}
+
+.trainer-card p {
+    font-size: large;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+}
+
+.trainer-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+/* ===== SCHEDULE ===== */
+.schedule {
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: #181818;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #e50914;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.class-card {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.class-card:hover {
+    transform: translateY(-10px);
+}
+
+.class-card h3 {
+    color: #e50914;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== CONTACT ===== */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.contact-container form {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-container input,
+.contact-container textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.contact-container textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-info {
+    flex: 1 1 45%;
+}
+
+.contact-info h3 {
+    color: #e50914;
+    margin-bottom: 1rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    background: #0a0a0a;
+    padding: 1rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        transition: right 0.4s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .program-container {
+        flex-direction: column;
+    }
+
+    .program-container img,
+    .program-text {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+    .pBtn{
+        display: none;
+    }
+}

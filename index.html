@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IronFit Gym</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">IRONFIT</div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#signup" class="signup-btn">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Push Your <span>Limits</span></h1>
+            <p>Transform your body and mind with the most advanced training programs at IronFit Gym.</p>
+            <a href="#signup" class="btn">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="swiper programs">
+        <h2>Our <span>Programs</span></h2>
+        <div class="swiper-wrapper">
+
+            <div class="program-container swiper-slide ">
+                <img src="images/program1.jpg" alt="Strength Training">
+                <div class="program-text">
+                    <h3>Strength Training</h3>
+                    <p>Build raw power and endurance with custom resistance and strength programs guided by experts.</p>
+                </div>
+            </div>
+
+            <div class="program-container swiper-slide">
+                <img src="images/program2.jpg" alt="Cardio Burn">
+                <div class="program-text">
+                    <h3>Cardio Burn</h3>
+                    <p>Boost stamina and cardiovascular performance with our dynamic HIIT and endurance sessions.</p>
+                </div>
+            </div>
+
+            <div class="program-container swiper-slide">
+                <img src="images/program3.jpg" alt="CrossFit Extreme">
+                <div class="program-text">
+                    <h3>CrossFit Extreme</h3>
+                    <p>Experience functional training that challenges every muscle and builds total-body power.</p>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="pBtn swiper-button-prev"></div>
+        <div class="pBtn swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+
+
+
+
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <p class="section-subtitle">Choose a plan that fits your fitness goals and lifestyle.</p>
+
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="card animate fade-up delay-1">
+                    <h class="plan-title">Basic</h3>
+                        <p class="plan-desc">Perfect for beginners starting their fitness journey.</p>
+                        <div class="plan-price">$29<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li>🏋️ Access to Gym Equipment</li>
+                            <li>🚿 Locker Room Access</li>
+                            <li>💧 Free Water Bottle</li>
+                        </ul>
+                        <button class="btn margin-top">Join Now</button>
+                </div>
+
+                <!-- Standard Plan -->
+                <div class="card featured animate fade-up delay-2">
+                    <h3 class="plan-title">Standard</h3>
+                    <p class="plan-desc">Ideal for regular gym-goers who want extra perks.</p>
+                    <div class="plan-price">$49<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>💪 All Basic Features</li>
+                        <li>🧘 Group Fitness Classes</li>
+                        <li>🥤 Protein Shake Discounts</li>
+                        <li>🕓 Extended Hours Access</li>
+                    </ul>
+                    <button class="btn btn-featured ">Get Started</button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="card animate fade-up delay-3">
+                    <h3 class="plan-title">Premium</h3>
+                    <p class="plan-desc">For dedicated athletes who want the best experience.</p>
+                    <div class="plan-price">$79<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>🔥 All Standard Features</li>
+                        <li>🏋️‍♂️ Personal Trainer Sessions</li>
+                        <li>🧖 Sauna & Spa Access</li>
+                        <li>🥗 Nutrition Consultation</li>
+                    </ul>
+                    <button class="btn">Join Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    < <!-- Trainers Section -->
+        <section id="trainers" class="trainers">
+            <h2>Meet Our <span>Trainers</span></h2>
+            <div class="trainer-container">
+                <div class="trainer-card">
+                    <img src="images/trainer1.jpg" alt="Trainer 1">
+                    <h3 class="h3">Alex Carter</h3>
+                    <p>Strength & Conditioning Coach</p>
+                </div>
+                <div class="trainer-card">
+                    <img src="images/trainer2.jpg" alt="Trainer 2">
+                    <h3 class="h3">Sophia Lee</h3>
+                    <p>Yoga & Flexibility Expert</p>
+                </div>
+                <div class="trainer-card">
+                    <img src="images/trainer3.jpg" alt="Trainer 3">
+                    <h3 class="h3">Michael Harris</h3>
+                    <p>CrossFit Specialist</p>
+                </div>
+                <div class="trainer-card">
+                    <img src="images/trainer4.jpg" alt="Trainer 4">
+                    <h3 class="h3">Rachel Adams</h3>
+                    <p>Cardio & HIIT Instructor</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule">
+            <h2>Class <span>Schedule</span></h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-day="all">All</button>
+                <button class="filter-btn" data-day="monday">Monday</button>
+                <button class="filter-btn" data-day="tuesday">Tuesday</button>
+                <button class="filter-btn" data-day="wednesday">Wednesday</button>
+                <button class="filter-btn" data-day="thursday">Thursday</button>
+                <button class="filter-btn" data-day="friday">Friday</button>
+                <button class="filter-btn" data-day="saturday">Saturday</button>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="class-card" data-day="monday">
+                    <h3>Strength Training</h3>
+                    <p>9:00 AM - 10:00 AM</p>
+                    <span>Coach Alex</span>
+                </div>
+                <div class="class-card" data-day="monday">
+                    <h3>Yoga Flow</h3>
+                    <p>6:00 PM - 7:00 PM</p>
+                    <span>Coach Sophia</span>
+                </div>
+                <div class="class-card" data-day="tuesday">
+                    <h3>CrossFit Extreme</h3>
+                    <p>7:00 AM - 8:00 AM</p>
+                    <span>Coach Michael</span>
+                </div>
+                <div class="class-card" data-day="wednesday">
+                    <h3>Cardio Burn</h3>
+                    <p>5:00 PM - 6:00 PM</p>
+                    <span>Coach Rachel</span>
+                </div>
+                <div class="class-card" data-day="thursday">
+                    <h3>Boxing Fitness</h3>
+                    <p>8:00 AM - 9:00 AM</p>
+                    <span>Coach Alex</span>
+                </div>
+                <div class="class-card" data-day="friday">
+                    <h3>Functional Mobility</h3>
+                    <p>6:00 PM - 7:00 PM</p>
+                    <span>Coach Michael</span>
+                </div>
+                <div class="class-card" data-day="saturday">
+                    <h3>Weekend Bootcamp</h3>
+                    <p>10:00 AM - 12:00 PM</p>
+                    <span>Coach Rachel</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2>Our <span>Gallery</span></h2>
+            <div class="gallery-grid">
+                <img src="images/gallery1.jpg" alt="Gallery 1">
+                <img src="images/gallery2.jpg" alt="Gallery 2">
+                <img src="images/gallery3.jpg" alt="Gallery 3">
+                <img src="images/gallery4.jpg" alt="Gallery 4">
+                <img src="images/gallery5.jpg" alt="Gallery 5">
+                <img src="images/gallery6.jpg" alt="Gallery 6">
+                <img src="images/gallery7.jpg" alt="Gallery 7">
+                <img src="images/gallery8.jpg" alt="Gallery 8">
+                <img src="images/gallery9.jpg" alt="Gallery 9">
+                <img src="images/gallery10.jpg" alt="Gallery 10">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact <span>Us</span></h2>
+            <div class="contact-container">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Visit Us</h3>
+                    <p>123 Iron Street, New York, NY</p>
+                    <p>Email: info@ironfitgym.com</p>
+                    <p>Phone: +1 800 555 0199</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 IronFit Gym | All Rights Reserved</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
