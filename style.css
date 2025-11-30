@@ -83,7 +83,7 @@ nav .signup-btn:hover {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("images/hero.jpg") center/cover no-repeat;
+        url("hero.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -597,4 +597,5 @@ h2 span {
     .pBtn{
         display: none;
     }
+
 }
